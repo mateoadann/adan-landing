@@ -173,7 +173,7 @@ export default function App() {
                   <li className="flex gap-3">
                     <SparkIcon className="mt-0.5 h-4 w-4 text-orange-500" />
                     <span>
-                      Facturación masiva y gestiones en <span className="font-semibold">Arca</span>.
+                      Facturación masiva y gestiones en <span className="font-semibold">ARCA</span>.
                     </span>
                   </li>
                   <li className="flex gap-3">
