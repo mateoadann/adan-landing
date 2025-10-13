@@ -168,7 +168,7 @@ export default function App() {
                 <ul className="mt-5 space-y-4 text-slate-700">
                   <li className="flex gap-3">
                     <SparkIcon className="mt-0.5 h-4 w-4 text-orange-500" />
-                    Consolidación automática de reportes mensuales.
+                    Consolidación automática de reportes mensuales. PDF → Excel
                   </li>
                   <li className="flex gap-3">
                     <SparkIcon className="mt-0.5 h-4 w-4 text-orange-500" />
@@ -351,7 +351,7 @@ function SectionProceso() {
             {
               step: "1",
               title: "Exploración",
-              desc: "Entiendo tu proceso y medimos el impacto.",
+              desc: "Entendemos tu proceso y medimos el impacto.",
             },
             {
               step: "2",
@@ -361,11 +361,11 @@ function SectionProceso() {
             {
               step: "3",
               title: "Implementación",
-              desc: "Integraciones livianas y mantenibles.",
+              desc: "Integraciones ágiles y fáciles de mantener.",
             },
             {
               step: "4",
-              title: "Entrega + medición",
+              title: "Resultados",
               desc: "Verificamos horas ahorradas y próximos pasos.",
             },
           ].map((p, i) => (
