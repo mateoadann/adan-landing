@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://adain.dev/sitemap.xml
