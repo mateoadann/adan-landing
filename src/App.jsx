@@ -6,8 +6,9 @@ const CALENDLY_LINK =
   "https://cal.com/adain/30min"; // TODO
 const WHATSAPP_LINK =
   "https://wa.me/message/SU5VAVYIU7NQO1"; // TODO
-const EMAIL = "mateo.adain@gmail.com"; // TODO
-// --------------------------------
+  const EMAIL = "mateo.adain@gmail.com"; // TODO
+  const EMAIL1 = "luciano.adain@gmail.com"; // TODO
+  // --------------------------------
 
 export default function App() {
   const [email, setEmail] = useState("");
@@ -171,9 +172,9 @@ export default function App() {
 
             <div className="relative z-10 md:col-span-2 md:pl-6">
               <div className="relative rounded-3xl border border-white/70 bg-white/90 p-6 shadow-xl backdrop-blur md:p-7">
-                <span className="inline-flex items-center gap-2 rounded-full border border-orange-200/60 bg-white/95 px-3 py-1 text-[0.65rem] font-medium uppercase tracking-[0.45em] text-orange-500 shadow-sm">
+                <span className="inline-flex items-center gap-2 rounded-full border border-orange-200/60 bg-white/95 px-2.5 py-1 text-[0.55rem] font-medium uppercase tracking-[0.3em] text-orange-500 shadow-sm whitespace-nowrap sm:px-3 sm:text-[0.65rem] sm:tracking-[0.45em]">
                   <SparkIcon className="h-3 w-3 text-orange-400" />
-                  Ejemplo de resultado
+                  ¿Qué podemos hacer por vos?
                 </span>
                 <ul className="mt-5 space-y-4 text-slate-700">
                   <li className="flex gap-3">
@@ -183,7 +184,7 @@ export default function App() {
                   <li className="flex gap-3">
                     <SparkIcon className="mt-0.5 h-4 w-4 text-orange-500" />
                     <span>
-                      Facturación masiva y gestiones en <span className="font-semibold">ARCA</span>.
+                      Facturación masiva y automatizaciones en <span className="font-semibold">ARCA/AFIP</span>.
                     </span>
                   </li>
                   <li className="flex gap-3">
@@ -192,7 +193,7 @@ export default function App() {
                   </li>
                   <li className="flex gap-3">
                     <SparkIcon className="mt-0.5 h-4 w-4 text-orange-500" />
-                    Dashboards de seguimientos.
+                    Integramos agentes IA en tus procesos.
                   </li>
                 </ul>
               </div>
@@ -294,6 +295,9 @@ export default function App() {
             <a href={`mailto:${EMAIL}`} className="transition hover:text-slate-800">
               {EMAIL}
             </a>
+            <a href={`mailto:${EMAIL1}`} className="transition hover:text-slate-800">
+              {EMAIL1}
+            </a>
           </div>
         </div>
       </footer>
@@ -304,7 +308,7 @@ export default function App() {
 /* ===== Secciones separadas para mantener el archivo limpio ===== */
 function SectionValor() {
   return (
-    <section id="valor" className="border-t border-white/60 py-16 md:py-24">
+    <section id="valor" className="border-t border-white/60 pt-12 pb-16 md:pt-16 md:pb-24">
       <div className="mx-auto max-w-6xl px-5">
         <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">
           Más tiempo para lo que realmente importa
