@@ -45,11 +45,10 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-white text-slate-900">
-      {/* Glow de fondo sutil superior para que no se vea borde */}
       {/* Aquí se configura el color */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[360px] bg-[radial-gradient(circle_at_top,rgba(249,115,22,0.12),transparent_70%)] opacity-40 blur-3xl" />
 
-      {/* ===== Header Fijo (sin borde) ===== */}
+      {/* ===== Header Fijo ===== */}
         <header
   className={`fixed inset-x-0 top-0 z-50 transition-all duration-500
     ${isCompact
@@ -63,8 +62,14 @@ export default function App() {
   >
     {/* Logo */}
     <a href="#home" className="flex flex-col leading-none">
-      <span className={`uppercase tracking-[0.5em] text-slate-800 font-semibold
-        ${isCompact ? "text-3xl" : "text-3xl"}`}>
+      <span
+        className={`
+          whitespace-nowrap 
+          font-semibold uppercase text-slate-800
+          text-2xl sm:text-3xl 
+          tracking-[0.35em] sm:tracking-[0.5em] 
+        `}
+      >
         <span className="mr-1">AD</span>
         <span className="inline-block -mx-0.5">Λ</span>
         <span>IN</span>
@@ -90,8 +95,13 @@ export default function App() {
     {/* CTA siempre visible */}
     <a
       href={CALENDLY_LINK}
-      className={`inline-flex items-center gap-2 rounded-full border border-slate-900/10 bg-slate-900 text-white transition hover:bg-slate-800
-        ${isCompact ? "px-6 py-3 text-sm" : "px-6 py-3 text-sm"}`}
+      className={`
+        inline-flex items-center justify-center gap-2 rounded-full
+        border border-slate-900/10 bg-slate-900 text-white transition hover:bg-slate-800
+        flex-shrink-0 
+        px-2.5 py-1.5 text-[11px] 
+        md:px-6 md:py-3 md:text-sm 
+      `}
     >
       Agendar diagnóstico <span aria-hidden>→</span>
     </a>
@@ -99,10 +109,10 @@ export default function App() {
 </header>
 
       <main className="relative">
-        {/* ===== Hero (subido más arriba) ===== */}
+        {/* ===== Hero ===== */}
         <section
           id="home"
-          className="relative pt-44 md:pt-50 pb-10 md:pb-12"
+          className="relative pt-36 md:pt-50 pb-10 md:pb-12"
         >
           {/* Fondo suave SIN corte */}
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(249,115,22,0.05),transparent_70%)]" />
@@ -190,7 +200,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* ===== Herramientas (queda más arriba en el primer scroll) ===== */}
+        {/* ===== Herramientas ===== */}
         <section
           aria-label="Herramientas y stack"
           className="border-y border-white/60 bg-white/70 backdrop-blur"
