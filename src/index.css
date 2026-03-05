@@ -2,69 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background-color: #0a0a0b;
+    color: #f5f0eb;
+  }
+
+  ::selection {
+    background-color: #e8763a40;
+    color: #f5f0eb;
+  }
+}
+
 @layer utilities {
-  @keyframes blob {
-    0% {
-      transform: translate3d(0, 0, 0) scale(1);
-    }
-    33% {
-      transform: translate3d(24px, -20px, 0) scale(1.05);
-    }
-    66% {
-      transform: translate3d(-18px, 16px, 0) scale(0.98);
-    }
-    100% {
-      transform: translate3d(0, 0, 0) scale(1);
-    }
+  .grain {
+    position: fixed;
+    inset: -200%;
+    width: 400%;
+    height: 400%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    animation: grain 8s steps(10) infinite;
   }
 
-  @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
+  .text-gradient-ember {
+    background: linear-gradient(135deg, #e8763a, #f09d6a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
-  @keyframes gradientSoft {
-    0% {
-      transform: rotate(0deg) scale(1);
-      opacity: 0.25;
-    }
-    50% {
-      transform: rotate(14deg) scale(1.05);
-      opacity: 0.4;
-    }
-    100% {
-      transform: rotate(0deg) scale(1);
-      opacity: 0.25;
-    }
+  .grid-pattern {
+    background-image:
+      linear-gradient(rgba(232, 118, 58, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(232, 118, 58, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
   }
 
-  .animate-blob {
-    animation: blob 18s ease-in-out infinite;
-  }
-
-  .animation-delay-2 {
-    animation-delay: 6s;
-  }
-
-  .animation-delay-4 {
-    animation-delay: 12s;
-  }
-
-  .bg-dot-grid {
-    background-image: radial-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 0);
-    background-size: 22px 22px;
-  }
-
-  .animate-marquee {
-    animation: marquee 28s linear infinite;
-  }
-
-  .animate-gradient-soft {
-    animation: gradientSoft 16s ease-in-out infinite;
-    will-change: transform, opacity;
+  .border-glow {
+    box-shadow: 0 0 0 1px rgba(232, 118, 58, 0.1),
+                0 0 30px -5px rgba(232, 118, 58, 0.08);
   }
 }
