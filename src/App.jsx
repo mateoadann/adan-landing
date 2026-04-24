@@ -1,28 +1,27 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import MarqueeBar from "./components/MarqueeBar";
-import SectionValor from "./components/SectionValor";
-import SectionProceso from "./components/SectionProceso";
-import SectionClientes from "./components/SectionClientes";
-import SectionContacto from "./components/SectionContacto";
-import Footer from "./components/Footer";
+import { Header, Hero, Marquee } from "./components/Hero";
+import { SectionValor, SectionProceso, SectionClientes, SectionContacto, Footer } from "./components/Sections";
 
 export default function App() {
   return (
-    <div className="relative min-h-screen bg-ink text-cream font-body">
-      {/* Film grain overlay */}
-      <div className="grain" />
+    <>
+      <div className="bg-layer bg-glow" />
+      <div className="bg-layer bg-grid" />
+      <div className="bg-layer bg-scan" />
+      <div className="bg-layer bg-noise" />
+      <div className="bg-layer bg-vignette" />
 
-      <Header />
-      <main className="relative">
-        <Hero />
-        <MarqueeBar />
-        <SectionValor />
-        <SectionProceso />
-        <SectionClientes />
-        <SectionContacto />
-      </main>
-      <Footer />
-    </div>
+      <div style={{ position: "relative", zIndex: 1 }}>
+        <Header />
+        <main>
+          <Hero />
+          <Marquee />
+          <SectionValor />
+          <SectionProceso />
+          <SectionClientes />
+          <SectionContacto />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }
